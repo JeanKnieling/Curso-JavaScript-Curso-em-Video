@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex_005</title>
+    <style>
+        body {
+
+            background: #abcdef;
+            color: black;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>"Exercício 005"</h1>
+    <h2>Iniciando os estudos no DOM</h2>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id='msg'>Clique em mim</div>
+    <div id='teste1'>Fazendo teste para chamar pelo querySelector!!!</div>
+    <script>
+        var divMsg = window.document.getElementById('msg')
+        var teste1 = window.document.querySelector('div#teste1') // aqui se eu tivesse usado uma classe na div o código ficaria igual mas mudaria aqui ('div.teste1')
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0] // aqui eu seleciono qual vai ser o parágro que eu vou estar acessando, a númeração vale da mesma forma que é empregado nos arrays(o primeiro elemento começa sempre com zero)
+        var p2 = window.document.getElementsByTagName('p')[1]
+
+        window.document.write('No primeiro parágrafo está escrito assim: <strong>' + p1.innerText + '</strong>.<br>')
+        window.document.write('No segundo parágrafo está escrito assim: ' + p2.innerHTML) // lembrando que o innerHTML traz com ele as tags junto na hora de reproduzir na tela. 
+        divMsg.style.background = 'red'
+        divMsg.innerText = 'Modificando texto para teste!!!'
+        window.document.getElementById('msg').innerText = 'Olá' // essa é uma maneira mais verbosa de fazer o mesmo comando acima.
+        document.write('<br>Chamando texto pelo querySelector: ' + teste1.innerText)
+        teste1.style.color = 'red'
+        teste1.style.background = 'black'
+        corpo.style.background = 'pink'
+        p1.style.color = 'red'
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex_006</title>
+    <style>
+        body {
+            background: #abcdef
+        }
+
+        div#area {
+
+            font: normal 20pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center
+
+        }
+    </style>
+</head>
+<body>
+    <h1>"Exercício 006"</h1> 
+    <div id="area"> <!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> -->
+        Interaja...
+    </div>
+    <script>
+
+        var divArea = document.querySelector('div#area')
+        divArea.addEventListener('click', clicar)
+        divArea.addEventListener('mouseenter', entrar)
+        divArea.addEventListener('mouseout', sair)
+
+        function clicar() {
+            // ou var divArea = document.getElementById('area')
+            // var divArea = document.querySelector('div#area')
+            divArea.innerText = "Você clicou!!!"
+            divArea.style.background = "red"
+        }
+
+        function entrar() {
+            divArea.innerText = "Você entrou!!!"
+        }  
+
+        function sair() {
+            divArea.innerText = "Você saiu!!!"
+            divArea.style.background = "green"
+        }  
+    </script>
+</body>
+</html>
