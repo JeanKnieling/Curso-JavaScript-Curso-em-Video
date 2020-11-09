@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ex_010</title>
     <style>
+        body {
+            background: lightyellow
+        }
         div#res {
+            color: green;
             margin-top: 20px;
         }
     </style>
@@ -22,8 +26,10 @@
             var txtvel = document.getElementById('txtvelocidade') 
             var res = document.querySelector('div#res')
             var vel = Number(txtvel.value)
+            res.style.color = 'black'
             res.innerHTML = `<p>Sua velocidade é de <strong>${vel}Km/h</strong>.</p>`
             if(vel > 60) {
+                res.style.color = "red"
                 res.innerHTML += "<p>Você ultrapassou o limite de velocidade. <strong>FOI MULTADO!!!</strong></p>"
             }
             res.innerHTML += "<p>Dirija sempre com cinto segurança!</p>"

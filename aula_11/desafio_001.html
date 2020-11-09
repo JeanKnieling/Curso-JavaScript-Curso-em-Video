@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>desafio_001</title>
+    <style>
+        body {
+            background: lightyellow
+        }
+        div#res {
+            margin-top: 16px
+        }
+
+    </style>
+</head>
+<body>
+    <h1>"Desafio 001"</h1>
+    <h2>Construir em forma de site o ex_009!!!</h2>
+    <h2>Verificando se você é brasileiro?</h2>
+    Você nasceu em qual país: <input type="text" name="txtbrasileiroOuNao" id="txtbrasileiroOuNao">
+    <input type="button" value="verificar" onclick="verificaSeBrasileiro()">
+    <div id="res"></div>
+    <script>
+
+        function verificaSeBrasileiro() {
+            var txtinputBrasileiroOuNao = document.getElementById('txtbrasileiroOuNao') 
+            var res = document.querySelector('div#res')
+            var verificaBrasileiro = String(txtinputBrasileiroOuNao.value)
+            if(verificaBrasileiro == 'Brasil') {
+                res.style.color = "green"
+                res.innerHTML = `<p>Você nasceu no Brasil você é <strong>Brasileiro</strong>!!!</p>`
+            } else {
+                res.style.color = 'black'
+                res.innerHTML = "Você não nasceu no Brasil, você é um <strong>Estrangeiro</strong>!!!"
+            }
+        }
+
+    </script>
+</body>
+</html>
